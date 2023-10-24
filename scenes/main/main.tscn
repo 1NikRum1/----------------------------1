@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b2ips41yfvb8x"]
+[gd_scene load_steps=15 format=3 uid="uid://b2ips41yfvb8x"]
 
 [ext_resource type="PackedScene" uid="uid://bwrd0h2mmnpyx" path="res://scenes/game_object/player_scenes/player.tscn" id="1_7p8ih"]
 [ext_resource type="PackedScene" uid="uid://de30m2b28vsto" path="res://scenes/manager/enemy_manager.tscn" id="1_isjjb"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://5ktfsl8wsxk6" path="res://assets/tiles/Trees.png" id="2_waah8"]
 [ext_resource type="PackedScene" uid="uid://caynwnfte75ja" path="res://scenes/ui/experience_bar.tscn" id="2_xdg8h"]
 [ext_resource type="PackedScene" uid="uid://co5dgccom0ly1" path="res://scenes/manager/experience_manager.tscn" id="4_ndpnx"]
+[ext_resource type="PackedScene" uid="uid://8ijoukxqkw83" path="res://scenes/manager/upgrade_manager.tscn" id="6_qqg6m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t158g"]
 texture = ExtResource("1_x3xnv")
@@ -418,6 +419,9 @@ experience_manager = NodePath("../ExperienceManager")
 [node name="EnemyManager" parent="." instance=ExtResource("1_isjjb")]
 
 [node name="ExperienceManager" parent="." instance=ExtResource("4_ndpnx")]
+
+[node name="UpgradeManager" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("6_qqg6m")]
+experience_manager = NodePath("../ExperienceManager")
 
 [node name="GameCamera" parent="." instance=ExtResource("1_xc4p6")]
 position = Vector2(327, 179)
