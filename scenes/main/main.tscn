@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://5ktfsl8wsxk6" path="res://assets/tiles/Trees.png" id="2_waah8"]
 [ext_resource type="PackedScene" uid="uid://caynwnfte75ja" path="res://scenes/ui/experience_bar.tscn" id="2_xdg8h"]
 [ext_resource type="PackedScene" uid="uid://co5dgccom0ly1" path="res://scenes/manager/experience_manager.tscn" id="4_ndpnx"]
-[ext_resource type="PackedScene" uid="uid://kchh67umlxng" path="res://scenes/manager/upgrade_manager.tscn" id="6_qqg6m"]
+[ext_resource type="PackedScene" uid="uid://8ijoukxqkw83" path="res://scenes/manager/upgrade_manager.tscn" id="6_qqg6m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t158g"]
 texture = ExtResource("1_x3xnv")
