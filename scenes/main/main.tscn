@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://b2ips41yfvb8x"]
+[gd_scene load_steps=17 format=3 uid="uid://b2ips41yfvb8x"]
 
 [ext_resource type="PackedScene" uid="uid://bwrd0h2mmnpyx" path="res://scenes/game_object/player_scenes/player.tscn" id="1_7p8ih"]
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_252p3"]
 [ext_resource type="PackedScene" uid="uid://de30m2b28vsto" path="res://scenes/manager/enemy_manager.tscn" id="1_isjjb"]
 [ext_resource type="Texture2D" uid="uid://bvbxo6yu14po" path="res://assets/tiles/GrassNDirt.png" id="1_x3xnv"]
 [ext_resource type="PackedScene" uid="uid://cmd03k5o0pgns" path="res://scenes/ui/arena_time_ui.tscn" id="1_x7k0q"]
@@ -8,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bgasyiavlbvx4" path="res://scenes/manager/arena_time_manager.tscn" id="2_vytc0"]
 [ext_resource type="Texture2D" uid="uid://5ktfsl8wsxk6" path="res://assets/tiles/Trees.png" id="2_waah8"]
 [ext_resource type="PackedScene" uid="uid://caynwnfte75ja" path="res://scenes/ui/experience_bar.tscn" id="2_xdg8h"]
+[ext_resource type="PackedScene" uid="uid://ikwsp711tfw6" path="res://scenes/ui/end_screen.tscn" id="2_xvwcl"]
 [ext_resource type="PackedScene" uid="uid://co5dgccom0ly1" path="res://scenes/manager/experience_manager.tscn" id="4_ndpnx"]
 [ext_resource type="PackedScene" uid="uid://8ijoukxqkw83" path="res://scenes/manager/upgrade_manager.tscn" id="6_qqg6m"]
 
@@ -407,6 +409,8 @@ sources/1 = SubResource("TileSetAtlasSource_7xgrw")
 sources/2 = SubResource("TileSetAtlasSource_p7hl4")
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_252p3")
+end_screen_scene = ExtResource("2_xvwcl")
 
 [node name="ArenaTimeUI" parent="." node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_x7k0q")]
 arena_time_manager = NodePath("../ArenaTimeManager")
@@ -458,6 +462,7 @@ layer_3/tile_data = PackedInt32Array(983053, 655362, 3, 1048589, 655362, 4, 1114
 y_sort_enabled = true
 
 [node name="Player" parent="Entities" instance=ExtResource("1_7p8ih")]
+unique_name_in_owner = true
 position = Vector2(915, 209)
 
 [node name="Foreground" type="Node2D" parent="." groups=["foreground_layer"]]
